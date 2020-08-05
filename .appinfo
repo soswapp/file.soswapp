@@ -1,0 +1,26 @@
+{
+  "nav" : false,
+  "icon" : "<i class='fas fa-info-circle'</i>",
+  "name" : "soswapp/file.soswapp",
+  "title" : "File",
+  "description" : "File Viewer.",
+  "homepage" : "https://github.com/soswapp/file.soswapp",
+  "authors": [
+      {
+        "name": "Ikechukwu Okalia",
+        "email": "dev@ikechukwuokalia.com"
+      },
+      {
+        "name": "Tym Frontiers Ltd.",
+        "email": "dev@tymfrontiers.com"
+      }
+  ],
+  "support" : {
+    "email" : "dev@tymfrontiers.com",
+    "website" : "https://dev.tymfrontiers.com",
+    "kollabo" : "tymfrontiers",
+    "twitter" : "tymfrontiers",
+    "facebook" : "tymfrontiers",
+    "instagram" : "tymfrontiers"
+  }
+}
