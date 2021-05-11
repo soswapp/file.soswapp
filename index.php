@@ -26,9 +26,9 @@ $file = $file[0];
 if (!empty($params['getsize']) && $file->groupName() == 'image') {
   list($width, $height) = \explode('x',\strtolower($params['getsize']));
   $width = (int)$width;
-  $width = $width >= 32 ? $width : false;
+  $width = $width >= 16 ? $width : false;
   $height = (int)$height;
-  $height = $height >= 32 ? $height : false;
+  $height = $height >= 16 ? $height : false;
   if ($width) {
     $rez = new \Gumlet\ImageResize($file->fullPath());
     if ($height) {
