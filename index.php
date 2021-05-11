@@ -24,11 +24,10 @@ $file = File::findBySql($query);
 if( !$file ) Header::notFound();
 $file = $file[0];
 if (!empty($params['getsize']) && $file->groupName() == 'image') {
-  list($width, $height) = \explode('x',\strtolower($params['getsize']));
-  $width = (int)$width;
-  $width = $width >= 16 ? $width : false;
-  $height = (int)$height;
-  $height = $height >= 16 ? $height : false;
+  $width = false; $height = false;
+  @ list($width, $height) = \explode('x',\strtolower($params['getsize']));
+  if ($width) $width = (int)$width >= 16 ? (int)$width : false;
+  if ($height) $height = (int)$height >= 16 ? (int)$height : false;
   if ($width) {
     $rez = new \Gumlet\ImageResize($file->fullPath());
     if ($height) {
